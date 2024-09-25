@@ -1,0 +1,208 @@
+/* Report Card */
+/* .report-card {
+    width: 520px;
+    height: 480px;
+    background-color: #442b4f;
+    color: #e7e7de;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    opacity: 0;
+    animation: slide-in-from-left 0.8s ease forwards;
+}
+
+.report-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 6px 20px rgba(0, 188, 212, 0.7);
+    filter: hue-rotate(90deg); 
+}
+
+.report-title {
+    height: 40px !important;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-family: Mulish, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #00bcd4 !important;
+    padding: 15px;
+    transition: color 0.3s ease;
+}
+
+.report-title-container {
+    display: flex;
+    align-items: center;
+}
+
+.report-title-icon {
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+.report-title {
+    font-weight: 900;
+    color: #999;
+}
+
+.report-item {
+    display: flex;
+    align-items: center !important;
+    justify-content: start !important;
+    padding: 15px 5px !important;
+    transition: background-color 0.3s ease;
+}
+
+.report-item:hover {
+    background-color: #0f3460;
+}
+
+.report-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.report-item:hover .report-icon {
+    transform: scale(1.2);
+}
+
+.report-link {
+    color: #00bcd4;
+    font-family: Mulish, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    margin-left: 10px;
+    transition: font-weight 0.3s ease, color 0.3s ease;
+}
+
+.report-link:hover {
+    font-weight: 700;
+    color: #e7e7de;
+    text-decoration: underline;
+}
+
+@keyframes slide-in-from-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+} */
+/* Container for the card and popup */
+.last-reports-accessed-container {
+    position: relative; /* To position the popup correctly */
+}
+
+/* Report Card */
+.report-card {
+    width: auto; /* Let the width adjust based on content */
+    background-color: #442b4f;
+    color: #e7e7de;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    padding: 15px;
+}
+.report-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 6px 20px rgba(0, 188, 212, 0.7);
+    filter: hue-rotate(90deg);
+}
+
+.report-title-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer; /* Makes the title clickable */
+}
+
+.report-title-icon {
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+.report-title {
+    font-family: Mulish, sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    color: #18c5e8;
+    transition: color 0.3s ease;
+}
+
+
+.report-title-container:hover .report-title {
+    color: #f4f41d;
+}
+
+/* Popup container */
+.popup-container {
+    position: absolute;
+    top: 30%; /* Position the popup below the title */
+    left: 0;
+    width: 400px; /* Set a width for the popup */
+    background-color: #b5b5b9;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 100; /* Ensure it appears above other content */
+    animation: fade-in 0.5s ease; /* Smooth fade-in animation */
+}
+
+.popup-report-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.popup-report-item:hover {
+    background-color: #050606;
+}
+
+.report-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+    background-color: #e92020;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.popup-report-item:hover .report-icon {
+    transform: scale(1.2);
+}
+
+.report-link {
+    color: #0c0c0c;
+    font-family: Mulish, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    margin-left: 10px;
+    transition: font-weight 0.3s ease, color 0.3s ease;
+}
+
+.report-link:hover {
+    font-weight: 700;
+    color: #e7e7de;
+    text-decoration: underline;
+}
+
+/* Animation for the popup */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
